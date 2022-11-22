@@ -124,7 +124,7 @@ public void playerTurn(Player p1, Player p2){
                   for (int i = 0; i < phraseBoard.length(); i++){
                     int letterCorrect = phraseSpaces.indexOf(letterInput);
                     if (!(letterCorrect == -1)){
-                      phraseSpaces = phraseSpaces.substring(0,letterCorrect) + "X" + phraseSpaces.substring(letterCorrect+1);
+                      phraseSpaces = phraseSpaces.substring(0,letterCorrect) + "#" + phraseSpaces.substring(letterCorrect+1);
                       phraseBoard = phraseBoard.substring(0,letterCorrect) + letterInput + phraseBoard.substring(letterCorrect+1);
                     }
                   }

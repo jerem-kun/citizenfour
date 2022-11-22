@@ -12,7 +12,7 @@ public class Spinner {
     
     public int spinRNG(){ 
         //bankruptcy chance
-        RNG = (int) (Math.random()*12);
+        RNG = (int) (Math.random()*16);
         if (RNG <= 1){
             System.out.println("\nWheel Spin Result: BANKRUPT");
             return 0; 
