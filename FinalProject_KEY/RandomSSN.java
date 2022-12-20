@@ -1,4 +1,4 @@
-package FinalProject;
+package FinalProject_KEY;
 
 public class RandomSSN {
     
@@ -11,13 +11,21 @@ public class RandomSSN {
     public RandomSSN(){
     }
 
-    public void generateRandom(){   //this 
+    public void generateRandom(){
         for(int i = 0; i < 9; i++){
             nextDigit = (int)(Math.random()*10);
             finalRandomSSN += nextDigit;
-            //TO DO: create conditionals that will check the area code (first 3 numbers) of the finalRandomSSN string
-            //if the area code is over 584, set i = 0 and finalRandomSSN = "", otherwise add a hyphen to the string
-            //create a conditional that will check for the length of finalRandomSSN and add a hyphen to the string after the 6th character
+            if (finalRandomSSN.length() == 3){
+                areaCode = Integer.valueOf(finalRandomSSN);
+                if (areaCode > 584) {
+                    i = 0;
+                    finalRandomSSN = "";
+                } else {
+                    finalRandomSSN += "-";
+                }
+            } else if (finalRandomSSN.length() == 6){
+                finalRandomSSN += "-";
+            }
         }
         correlatedState = areas.giveState(areaCode);
         System.out.println("\nSOCIAL SECURITY NUMBER: " + finalRandomSSN);

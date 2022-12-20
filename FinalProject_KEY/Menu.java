@@ -1,4 +1,4 @@
-package FinalProject;
+package FinalProject_KEY;
 import java.util.Scanner;
 
 public class Menu {
@@ -9,6 +9,7 @@ public class Menu {
     
     public void menuSSN(){
         System.out.println("\n[FREE SOCIAL SECURITY NUMBERS]");
+
         boolean menuValid = true;
         while (menuValid == true) {
             Scanner sc = new Scanner(System.in);
@@ -18,13 +19,16 @@ public class Menu {
             System.out.println("\nWhat would you like to generate?");
             typeInput = sc.nextLine();
 
-            //TO DO:
-            //create a conditional below that will compare the value of String typeInput to "1", "2", and "3"
-            //have "1" run the following method: random.generateRandom()
-            //have "2" run the following method: specific.generateSpecific()
-            //have "3" switch the boolean menuValid to false
-            //if the input is not "1", "2", or "3", print a statement to let the user know to enter one of the three
-
+            if (typeInput.equals("1")) {
+                random.generateRandom();
+            } else if (typeInput.equals("2")){
+                specific.generateSpecific();
+            } else if (typeInput.equals("3")){
+                menuValid = false;
+                System.out.println("\nSYSTEM: See you space cowboy...");
+            } else {
+                System.out.println("\nSYSTEM: Enter Valid Input\n");
+            }
         }
     }
 }

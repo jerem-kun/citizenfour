@@ -1,4 +1,4 @@
-package FinalProject;
+package FinalProject_KEY;
 
 public class AreaCodes {
     
@@ -9,20 +9,19 @@ public class AreaCodes {
     }
 
     public String giveNumber(String n){
-        //for the following missing conditions (area codes 001-034), fill in the appropriate boolean expression
-        if (/*TO DO: insert boolean that checks if the parameter String n is equivalent to "NEW HAMPSHIRE"*/){ //001-003
+        if (n.equals("NEW HAMPSHIRE")){ //001-003
             givenNumber = "00";
             givenNumber += (int)(Math.random()*4);
             return givenNumber;
-        } else if (/*TO DO: insert boolean that checks if the parameter String n is equivalent to "MAINE"*/){ //004-007
+        } else if (n.equals("MAINE")){ //004-007
             givenNumber = "00";
             givenNumber += (int)(Math.random()*4)+4;
             return givenNumber;
-        } else if (/*TO DO: insert boolean that checks if the parameter String n is equivalent to "VERMONT"*/){ //008-009
+        } else if (n.equals("VERMONT")){ //008-009
             givenNumber = "00";
             givenNumber += (int)(Math.random()*2)+8;
             return givenNumber;
-        } else if (/*TO DO: insert boolean that checks if the parameter String n is equivalent to "MASSACHUSETTS"*/){ //010-034
+        } else if (n.equals("MASSACHUSETTS")){ //010-034
             givenNumber = "0";
             givenNumber += (int)(Math.random()*25)+10;
             return givenNumber;
@@ -185,15 +184,14 @@ public class AreaCodes {
         }
     }
 
-    //for the following missing conditions (states: New Hampshire, Maine, Vermont, Massachusetts, Wyoming (further down)), fill in the appropriate boolean expression
     public String giveState(int n){
-        if (/*TO DO: insert boolean that checks if the value of parameter int n is 1-3*/){ //New Hampshire
+        if (n>=1 && n<=3){ //New Hampshire
             return "New Hampshire";
-        } else if (/*TO DO: insert boolean that checks if the value of parameter int n is 4-7*/){ //Maine
+        } else if (n>=4 && n<=7){ //Maine
             return "Maine";
-        } else if (/*TO DO: insert boolean that checks if the value of parameter int n is 8-9*/){ //Vermont
+        } else if (n>=8 && n<=9){ //Vermont
             return "Vermont";
-        } else if (/*TO DO: insert boolean that checks if the value of parameter int n is 10-34*/){ //Massachusetts
+        } else if (n>=10 && n<=34){ //Massachusetts
             return "Massachusetts";
         } else if (n>=35 && n<=39){ //Rhode Island
             return "Rhode Island";
@@ -265,7 +263,7 @@ public class AreaCodes {
             return "Montana";
         } else if (n>=518 && n<=519){ //Idaho
             return "Idaho";
-        } else if (/*TO DO: insert boolean that checks if the value of parameter int n is 520*/){ //Wyoming
+        } else if (n==520){ //Wyoming
             return "Wyoming";
         } else if (n>=521 && n<=524){ //Colorado
             return "Colorado";

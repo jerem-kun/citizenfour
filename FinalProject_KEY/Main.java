@@ -1,4 +1,4 @@
-package FinalProject;
+package FinalProject_KEY;
 
 public class Main {
     
