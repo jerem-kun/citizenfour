@@ -20,7 +20,7 @@ public class Menu {
             System.out.println("\nWhat would you like to generate?");
             typeInput = sc.nextLine();
 
-            //TO DO:
+            //STEP 4: TO DO:
             //create a conditional below that will compare the value of String typeInput to "1", "2", and "3"
             //have "1" run the following method: random.generateRandom()
             //have "2" run the following method: specific.generateSpecific()

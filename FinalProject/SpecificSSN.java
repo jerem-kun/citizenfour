@@ -30,7 +30,7 @@ public class SpecificSSN {
                 for (int i = 0; i < 5; i++){
                     nextDigit = (int)(Math.random()*10);
                     finalSpecificSSN += nextDigit;
-                    //to properly format the SSN, a hyphen needs to occur after the 6th character (XXX-XX-XXXX)
+                    //STEP 3: to properly format the SSN, a hyphen needs to occur after the 6th character (XXX-XX-XXXX)
                     //TO DO: create an if statement below that will check for the length of finalSpecificSSN and add a hyphen to the string when appropriate
                     
                 }

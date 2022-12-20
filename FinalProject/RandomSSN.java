@@ -16,7 +16,7 @@ public class RandomSSN {
         for(int i = 0; i < 9; i++){
             nextDigit = (int)(Math.random()*10);
             finalRandomSSN += nextDigit;
-            //TO DO: create conditionals that will check the area code (first 3 numbers) of the finalRandomSSN string
+            //STEP 5: TO DO: create conditionals that will check the area code (first 3 numbers) of the finalRandomSSN string
             //if the area code is over 584, set i = 0 and finalRandomSSN = "", otherwise add a hyphen to the string
             //create a conditional that will check for the length of finalRandomSSN and add a hyphen to the string after the 6th character
         }

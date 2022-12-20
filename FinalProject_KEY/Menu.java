@@ -14,6 +14,7 @@ public class Menu {
         boolean menuValid = true;
         while (menuValid == true) {
             Scanner sc = new Scanner(System.in);
+            //menu options
             System.out.println("\n\t1. Create Random SSN");
             System.out.println("\t2. Create Location-Specific SSN");
             System.out.println("\t3. Exit");

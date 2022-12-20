@@ -36,7 +36,7 @@ public class SpecificSSN {
                 }
             }          
         }
-
+        //prints generated SSN
         System.out.println("\nSOCIAL SECURITY NUMBER: " + finalSpecificSSN);
         System.out.println("STATE: " + stateInput); 
     }

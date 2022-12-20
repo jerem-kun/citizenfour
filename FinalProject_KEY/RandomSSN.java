@@ -18,6 +18,7 @@ public class RandomSSN {
             finalRandomSSN += nextDigit;
             if (finalRandomSSN.length() == 3){
                 areaCode = Integer.valueOf(finalRandomSSN);
+                //checks that area code is under 584 (the max for this program)
                 if (areaCode > 584) {
                     i = 0;
                     finalRandomSSN = "";
@@ -28,6 +29,7 @@ public class RandomSSN {
                 finalRandomSSN += "-";
             }
         }
+        //prints generated SSN
         correlatedState = areas.giveState(areaCode);
         System.out.println("\nSOCIAL SECURITY NUMBER: " + finalRandomSSN);
         System.out.println("STATE: " + correlatedState + "\n");

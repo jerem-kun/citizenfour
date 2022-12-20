@@ -8,7 +8,7 @@ public class AreaCodes {
 
     }
 
-    //generates an area code based off the state
+    //returns an area code based off the desired state
     public String giveNumber(String n){
         if (n.equals("NEW HAMPSHIRE")){ //001-003
             givenNumber = "00";
