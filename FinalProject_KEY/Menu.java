@@ -8,8 +8,9 @@ public class Menu {
     SpecificSSN specific = new SpecificSSN();
     
     public void menuSSN(){
+        //title
         System.out.println("\n[FREE SOCIAL SECURITY NUMBERS]");
-
+        //loop to reprompt menu
         boolean menuValid = true;
         while (menuValid == true) {
             Scanner sc = new Scanner(System.in);
@@ -19,6 +20,7 @@ public class Menu {
             System.out.println("\nWhat would you like to generate?");
             typeInput = sc.nextLine();
 
+            //runs methods based on user input to generate SSN
             if (typeInput.equals("1")) {
                 random.generateRandom();
             } else if (typeInput.equals("2")){

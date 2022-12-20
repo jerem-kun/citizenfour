@@ -8,6 +8,7 @@ public class AreaCodes {
 
     }
 
+    //generates an area code based off the state
     public String giveNumber(String n){
         //for the following missing conditions (area codes 001-034), fill in the appropriate boolean expression
         if (/*TO DO: insert boolean that checks if the parameter String n is equivalent to "NEW HAMPSHIRE"*/){ //001-003
@@ -185,6 +186,7 @@ public class AreaCodes {
         }
     }
 
+    //returns the state/territory according to the area code value
     //for the following missing conditions (states: New Hampshire, Maine, Vermont, Massachusetts, Wyoming (further down)), fill in the appropriate boolean expression
     public String giveState(int n){
         if (/*TO DO: insert boolean that checks if the value of parameter int n is 1-3*/){ //New Hampshire

@@ -8,7 +8,9 @@ public class Menu {
     SpecificSSN specific = new SpecificSSN();
     
     public void menuSSN(){
+        //title
         System.out.println("\n[FREE SOCIAL SECURITY NUMBERS]");
+        //loop to reprompt menu
         boolean menuValid = true;
         while (menuValid == true) {
             Scanner sc = new Scanner(System.in);

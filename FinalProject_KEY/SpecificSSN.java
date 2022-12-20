@@ -14,12 +14,14 @@ public class SpecificSSN {
     
     public void generateSpecific(){
         Scanner sc = new Scanner(System.in);
+        //loop to reprompt state input
         boolean stateValid = false;
         while (stateValid == false){
             System.out.println("\nGenerate SSN for which state? (include spaces)");
             stateInput = sc.nextLine().toUpperCase();
             stateCode = areas.giveNumber(stateInput);
 
+            //randomly generates SSN based on area code provided for the specific state
             if (stateCode.equals("9999")){
                 System.out.println("SYSTEM: Enter Valid Input");
             } else {

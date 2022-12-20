@@ -11,6 +11,7 @@ public class RandomSSN {
     public RandomSSN(){
     }
 
+    //randomly generates SSN, has to meet certain conditions/format
     public void generateRandom(){
         for(int i = 0; i < 9; i++){
             nextDigit = (int)(Math.random()*10);
