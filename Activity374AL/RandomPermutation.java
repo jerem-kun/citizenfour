@@ -12,6 +12,7 @@ public class RandomPermutation {
       //String[] seven = new String[length];
       ArrayList<String> g = new ArrayList<String>();
       ArrayList<String> seven = new ArrayList<String>();
+      ArrayList<String> launcher = new ArrayList<String>();
       
       for (int i = 0; i < length; i++)
         p[i] = i + 1;
@@ -33,6 +34,7 @@ public class RandomPermutation {
           String horseStats = sc.nextLine();
           String name = horseStats.substring(0, (horseStats.indexOf(",")));
           g.add(name);
+          launcher.add(name);
         }
         System.out.println("\nNon-scarmbled Horseys: " + g.toString()); 
       } catch(Exception e) {System.out.println("Error reading or parsing phrases.txt");}
@@ -45,15 +47,21 @@ public class RandomPermutation {
       System.out.println("\nScarmbled Horseys: " + seven.toString() + "\n");
 
 
+      
       //  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾)  (っ＾▿＾) 
       int limit = (int)(length/2);
 
+      for(int i = 0; i < length; i++){
+        int neigh = r[i]-1;    
+        launcher.add(g.get(neigh));
+      }
+
       for(int i = 0; i < limit; i++){
-        System.out.println(seven.get(i*2) + " and " + seven.get(i*2+1) + " are partnered!");
+        System.out.println(launcher.get(i*2) + " and " + launcher.get(i*2+1) + " are partnered!");
       }
 
       if (length%2 != 0){
-        System.out.println(seven.get(length-1) + " does not have a partner D: \n");
+        System.out.println(launcher.get(length-1) + " does not have a partner D: \n");
       }
 
     }
