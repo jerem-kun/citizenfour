@@ -20,19 +20,16 @@ public class Welcome03_List {
       System.out.println("Stations in " + state);
       for (WeatherStation ws : allstns) {
          if (ws.isLocatedInState(state)) {
-            System.out.println("  " + ws.getId() + ": " + ws.getName());
+            System.out.println("  " + ws.getId() + ": " + ws.getName() + ": " + ws.getLat());
          }
       }
 
-      WeatherStation south = new WeatherStation("", "", "", 0, 0);
-      WeatherStation prevWS = new WeatherStation("", "", "", 0, 0);
+      WeatherStation south = new WeatherStation("", "", "", 99999, 0);
       for (WeatherStation ws : allstns) {
          if (ws.isLocatedInState(state)) {
-            System.out.println("  " + ws.getId() + ": " + ws.getName());
-            if (ws.getLat() < prevWS.getLat()){
+            if (ws.getLat() < south.getLat()){
                south = ws;
             }
-            prevWS = ws;
          }
       } 
       System.out.println("\n SOUTHERNMOST STATION: " + south.getId() + ": " + south.getName());
