@@ -16,7 +16,7 @@ public class Cereal {
         return cerealName;
     }
 
-    public int getUtensil(){
+    public int getSodium(){
         return sodium;
     }
 
