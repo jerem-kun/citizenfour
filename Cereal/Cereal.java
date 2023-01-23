@@ -3,25 +3,25 @@ package Cereal;
 public class Cereal {
     
     String cerealName;
-    String utensil;
-    int votes;
+    int sodium;
+    double rating;
 
-    public Cereal(String n, String u, int v){
+    public Cereal(String n, int s, double r){
         cerealName = n;
-        utensil = u;
-        votes = v;
+        sodium = s;
+        rating = r;
     }
 
     public String getName(){
         return cerealName;
     }
 
-    public String getUtensil(){
-        return utensil;
+    public int getUtensil(){
+        return sodium;
     }
 
-    public int getVotes(){
-        return votes;
+    public double getRating(){
+        return rating;
     }
 
 }
