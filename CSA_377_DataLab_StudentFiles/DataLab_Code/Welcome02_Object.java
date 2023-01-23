@@ -27,7 +27,7 @@ public class Welcome02_Object {
       Observation ob3 = ds3.fetch("Observation", "weather", "temp_f", "wind_degrees");
       System.out.println(id3 + ": " + ob3);
 
-      if (ob1.colderThan(ob2)) {
+      if (ob1.colderThan(ob2) && ob1.colderThan(ob3)) {
          System.out.println("Colder at " + id1);
       } else if (ob2.colderThan(ob3)){
          System.out.println("Colder at " + id2);
